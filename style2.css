@@ -1,0 +1,166 @@
+html, body{
+margin:0;
+padding:0;
+height:100%;
+}
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(to bottom,#d8e2ec,#efd6cf,#e8d8cc,#dde4ea);
+overflow-x:hidden;
+}
+
+.page2{
+width:100%;
+padding:calc(80px + env(safe-area-inset-top)) 20px 80px;
+position:relative;
+min-height:100vh;
+box-sizing:border-box;
+}
+
+.content{
+max-width:700px;
+margin:0 auto;
+text-align:center;
+}
+
+/* SCROLL INDICATOR */
+
+.scroll-indicator{
+position:fixed;
+top:25px;
+left:50%;
+transform:translateX(-50%);
+font-size:0.75rem;
+letter-spacing:3px;
+color:#888;
+animation:fadeBlink 2.5s infinite;
+z-index:10;
+pointer-events:none;
+transition:opacity .4s ease;
+}
+
+.scroll-indicator.hide{
+opacity:0;
+}
+
+@keyframes fadeBlink{
+0%,100%{opacity:0.3;}
+50%{opacity:1;}
+}
+
+/* PLAYER */
+
+.music-player{
+display:flex;
+justify-content:center;
+margin-bottom:10px;
+}
+
+.cover{
+position:relative;
+width:90%;
+max-width:320px;
+border-radius:25px;
+overflow:hidden;
+cursor:pointer;
+}
+
+.cover img{
+width:100%;
+}
+
+.player-overlay{
+position:absolute;
+inset:0;
+display:flex;
+justify-content:center;
+align-items:flex-start;
+padding-top:calc(475px + env(safe-area-inset-top));
+}
+
+.play-icon{
+width:50px;
+height:50px;
+border-radius:50%;
+background:rgba(255,255,255,0.25);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.play-icon::before{
+content:'';
+border-left:14px solid white;
+border-top:9px solid transparent;
+border-bottom:9px solid transparent;
+margin-left:4px;
+}
+
+.playing .play-icon::before{
+content:'❚❚';
+color:white;
+font-size:20px;
+border:none;
+}
+
+/* PLAY TEXT */
+
+.play-song-text{
+margin-top:18px;
+font-size:0.85rem;
+letter-spacing:2px;
+color:#7a7a7a;
+cursor:pointer;
+animation:blink 2s infinite;
+}
+
+.play-song-text.playing{
+animation:none;
+color:#C9A227;
+}
+
+@keyframes blink{
+0%,100%{opacity:1;}
+50%{opacity:0.3;}
+}
+
+/* LYRICS */
+
+.lyrics{
+max-width:600px;
+margin:60px auto 40px;
+line-height:1.9;
+font-size:0.95rem;
+}
+
+.lyrics span{color:#555;}
+.lyrics em{color:#C9A227;font-style:italic;}
+
+/* SPRINKLES */
+
+.sprinkles-container{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+z-index:-1;
+}
+
+.sprinkle{
+position:absolute;
+width:6px;
+height:14px;
+border-radius:3px;
+background:linear-gradient(45deg,#D4AF37,#F7E7A1);
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+from{transform:translateY(-120px);}
+to{transform:translateY(120vh);}
+}

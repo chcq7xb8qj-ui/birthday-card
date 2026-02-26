@@ -1,0 +1,87 @@
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(#cfe8ff,#f7f1e3);
+overflow:hidden;
+}
+
+.page{
+height:100vh;
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+padding-top:70px;
+position:relative;
+transition:opacity .6s ease;
+}
+
+.main-title{
+font-family:'Playfair Display',serif;
+letter-spacing:8px;
+font-size:2.8rem;
+color:#3a3a3a;
+}
+
+.subtitle{
+color:#666;
+margin-bottom:40px;
+}
+
+.sprinkle{
+position:absolute;
+width:6px;
+height:14px;
+border-radius:3px;
+animation:fall linear infinite;
+}
+
+@keyframes fall{
+from{transform:translateY(-100px) rotate(0);}
+to{transform:translateY(110vh) rotate(360deg);}
+}
+
+.cake{
+position:relative;
+margin-top:10px;
+animation:float 4s ease-in-out infinite;
+}
+
+.cake-img{
+width:230px;
+}
+
+/* VELA */
+
+.candle-svg{
+position:absolute;
+top:2%;
+left:50%;
+transform:translateX(-50%);
+width:28px;
+cursor:pointer;
+}
+
+/* FLAMA */
+
+#flame{
+transform-origin:center;
+animation:flameFlicker .18s infinite alternate;
+filter:drop-shadow(0 0 6px rgba(255,209,102,0.9));
+}
+
+.blow-text{
+margin-top:15px;
+color:#777;
+font-size:.9rem;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-15px)}
+}
+
+@keyframes flameFlicker{
+from{transform:scale(1) rotate(-1deg);}
+to{transform:scale(1.15) rotate(1deg);}
+}

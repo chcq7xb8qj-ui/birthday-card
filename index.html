@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+<title>Birthday Card</title>
+</head>
+
+<body>
+
+<div class="page" id="page">
+
+<div class="sprinkles-container"></div>
+
+<h1 class="main-title">HAPPY BIRTHDAY</h1>
+
+<p class="subtitle">
+To My Favorite Human in the Galaxy,<br>
+23 Looks Perfect on You ✨
+</p>
+
+<div class="cake">
+
+<img src="cake.png" class="cake-img">
+
+<!-- VELA CLICKEABLE -->
+<svg class="candle-svg" viewBox="0 0 40 80" onclick="blowCandle()">
+
+<rect x="17" y="25" width="6" height="28" rx="3" fill="#f8f1e5"/>
+<rect x="20" y="25" width="3" height="28" rx="3" fill="#eadfcd" opacity="0.5"/>
+
+<path id="flame"
+d="M20 15 C15 22, 18 28, 20 30 C22 28, 25 22, 20 15Z"
+fill="#ffd166"/>
+
+</svg>
+
+</div>
+
+<p class="blow-text">Blow the candle</p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

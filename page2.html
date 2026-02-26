@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<!-- ✅ FIX ZOOM MÓVIL -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style2.css">
+
+<title>Our Story</title>
+</head>
+
+<body>
+
+<div class="page2">
+
+<div class="scroll-indicator" id="scrollIndicator">
+Scroll to continue
+</div>
+
+<div class="sprinkles-container"></div>
+
+<div class="content">
+
+<h1 class="title">Proud of the Man You Are Becoming</h1>
+
+<p class="subtitle">
+Since your birthday in 2020, and every October after that, celebrating you and celebrating us has been my greatest joy. I love you.
+</p>
+
+<div class="music-player">
+
+<div class="cover" onclick="toggleMusic()">
+<img src="cover.jpg">
+
+<div class="player-overlay">
+<div class="play-icon"></div>
+</div>
+
+</div>
+
+<audio id="audio" src="song.mp3"></audio>
+
+</div>
+
+<div class="play-song-text" id="playSongText" onclick="toggleMusic()">
+Play the song
+</div>
+
+<div class="lyrics">
+
+<p><span>Dame tu dedo índice, ponlo detrás de mi oído</span><br><em>Give me your index finger, place it behind my ear</em></p>
+<p><span>Dime, ¿sientes el latido?</span><br><em>Tell me, can you feel my pulse?</em></p>
+<p><span>Tantas personas llegaron, pero nadie con tu estilo</span><br><em>So many people came into my life, but nobody with your style</em></p>
+<p><span>Eres un laberinto</span><br><em>You’re a maze</em></p>
+<p><span>Mi manantial, mi voz, mi ritmo, mi raíz</span><br><em>My wellspring, my voice, my rhythm, my root</em></p>
+<p><span>Mi rato de felicidad</span><br><em>My moment of joy</em></p>
+<p><span>Devoto por la eternidad a ti, a ti</span><br><em>Devoted to you for eternity, to you</em></p>
+<p><span>Estorbarme, moléstame</span><br><em>Get in my way, annoy me</em></p>
+<p><span>Por nada dejo de quererte</span><br><em>Nothing would make me stop loving you</em></p>
+<p><span>Eres tan especial</span><br><em>You’re so special</em></p>
+<p><span>Tú eres tan especial</span><br><em>You are so special</em></p>
+<p><span>Te amo</span><br><em>I love you</em></p>
+<p><span>Te amo</span><br><em>I love you</em></p>
+
+</div>
+
+</div>
+</div>
+
+<script>
+window.addEventListener("pageshow", function() {
+window.scrollTo(0, 0);
+});
+</script>
+
+<script src="script2.js"></script>
+
+</body>
+</html>
